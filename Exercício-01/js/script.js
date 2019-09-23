@@ -18,10 +18,28 @@ for (let i = 0; i < alunas.length; i++){
 //     lista.appendChild(item)
 // })
 
-let soma = 0
+// exemplos de eventos:
+
+// let soma = 0
+
+// const meuTitulo = document.querySelector(".titulo")
+
+// meuTitulo.addEventListener("click", function logar(){
+//     console.log(soma++)
+// })
+
+// ou
+
+// const meuTitulo = document.querySelector(".titulo")
+
+// meuTitulo.addEventListener("click", function (){
+//     meuTitulo.style.color = "red"
+// })
+
+// ou
 
 const meuTitulo = document.querySelector(".titulo")
 
-meuTitulo.addEventListener("click", function logar(){
-    console.log(soma++)
+meuTitulo.addEventListener("click", function (){
+    meuTitulo.classList.add("azul")
 })

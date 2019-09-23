@@ -17,3 +17,8 @@ body {
 .aluna {
     list-style: none;
 }
+
+.azul {
+    color: blue;
+    text-decoration: underline;
+}
