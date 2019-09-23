@@ -17,3 +17,11 @@ for (let i = 0; i < alunas.length; i++){
 //     item.textContent = aluna
 //     lista.appendChild(item)
 // })
+
+let soma = 0
+
+const meuTitulo = document.querySelector(".titulo")
+
+meuTitulo.addEventListener("click", function logar(){
+    console.log(soma++)
+})
