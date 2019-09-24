@@ -27,5 +27,5 @@ body {
 }
 
 .gatoNone {
-    display: none;
+    opacity: 0;
 }
