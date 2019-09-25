@@ -17,12 +17,12 @@ formulario.addEventListener("submit", function(evento){
         // input.classList.add("erro-input")
         // msgErro.classList.add("erro")
     } else {
+        msgErro.textContent = ""
         let novoComentario = document.createElement("p")
         novoComentario.textContent = mensagem
         todosOsComentarios.appendChild(novoComentario)
         novoComentario.classList.add("comentario")
         formulario.reset()
         // outra forma de escrever a linha acima: input.value = ""
-        msgErro.textContent = ""
     }
 })
