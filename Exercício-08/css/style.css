@@ -1,0 +1,31 @@
+* {
+    text-align: center;
+}
+
+body {
+    background-color: #E2ACD7;
+    font-family: 'Nunito', sans-serif;
+}
+
+h1 {
+    color: purple;
+    text-align: center;
+}
+
+h3 {
+    color: purple;
+}
+
+span {
+    font-weight: bold
+}
+
+p {
+    font-style: italic; 
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: purple;
+}
