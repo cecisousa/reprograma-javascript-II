@@ -26,7 +26,7 @@ for (let livro in livros){
     listaDeAutores.textContent = livros[livro]["quemEscreveu"]
     catalogo.appendChild(listaDeAutores)
     let listaDeLinks = document.createElement("a")
-    listaDeLinks.textContent = livros[livro]["link"]
+    listaDeLinks.textContent = "Quero ler agora!"
     listaDeLinks.setAttribute("href", livros[livro]["link"])
     listaDeLinks.setAttribute("target", "_blank")
     catalogo.appendChild(listaDeLinks)
