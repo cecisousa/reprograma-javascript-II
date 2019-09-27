@@ -143,7 +143,7 @@ for (let livro in livros){
     listaDeLinks.classList.add("livro__link")
 
     const botaoJaLi = document.createElement("button")
-    botaoJaLi.textContent = "Já li!"
+    botaoJaLi.textContent = "Marcar como lido"
     meuLivro.appendChild(botaoJaLi)
     botaoJaLi.classList.add("botao-lido")
 
@@ -151,18 +151,12 @@ for (let livro in livros){
         // Criando um toggle
         if (listaDeTitulos.classList.contains("livro__titulo--lido")){
             listaDeTitulos.classList.remove("livro__titulo--lido")
-            botaoJaLi.textContent = "Já li!"
+            botaoJaLi.textContent = "Marcar como lido"
             botaoJaLi.classList.remove("botao-nao-lido")
-            botaoJaLi.classList.add("botao-lido")
         } else {
             listaDeTitulos.classList.add("livro__titulo--lido")
-            botaoJaLi.textContent = "Não li!"
-            botaoJaLi.classList.remove("botao-lido")
+            botaoJaLi.textContent = "Marcar como não lido"
             botaoJaLi.classList.add("botao-nao-lido")
         }
     })
 }
-
-
-
-
