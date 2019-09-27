@@ -19,15 +19,54 @@ const livros = {
 const catalogo = document.getElementById("lista-do-catalogo")
 
 for (let livro in livros){
-    let listaDeTitulos = document.createElement("h3")
+    const meuLivro = document.createElement("li")
+    catalogo.appendChild(meuLivro)
+    meuLivro.classList.add("livro")
+
+    const listaDeTitulos = document.createElement("h3")
     listaDeTitulos.textContent = livros[livro]["titulo"]
-    catalogo.appendChild(listaDeTitulos)
-    let listaDeAutores = document.createElement("p")
+    meuLivro.appendChild(listaDeTitulos)
+    listaDeTitulos.classList.add("livro__titulo")
+
+    const listaDeAutores = document.createElement("p")
     listaDeAutores.textContent = livros[livro]["quemEscreveu"]
-    catalogo.appendChild(listaDeAutores)
-    let listaDeLinks = document.createElement("a")
-    listaDeLinks.textContent = "Quero ler agora!"
+    meuLivro.appendChild(listaDeAutores)
+    listaDeAutores.classList.add("livro__autoria")
+
+    const listaDeLinks = document.createElement("a")
+    listaDeLinks.textContent = "Quero ler!"
     listaDeLinks.setAttribute("href", livros[livro]["link"])
     listaDeLinks.setAttribute("target", "_blank")
-    catalogo.appendChild(listaDeLinks)
+    meuLivro.appendChild(listaDeLinks)
+    listaDeLinks.classList.add("livro__link")
+
+    const botaoJaLi = document.createElement("button")
+    botaoJaLi.textContent = "Já li!"
+    meuLivro.appendChild(botaoJaLi)
+    botaoJaLi.classList.add("botao-lido")
+
+    const botaoDesfazer = document.createElement("button")
+    botaoDesfazer.textContent = "Desfazer"
+    meuLivro.appendChild(botaoDesfazer)
+    botaoDesfazer.classList.add("botao-desfazer")
+}
+
+const livroLido = document.querySelectorAll(".botao-lido")
+
+for (let i = 0; i < livroLido.length; i++){
+    livroLido[i].addEventListener("click", function(){
+        const check = document.querySelectorAll(".livro__titulo")
+        check[i].classList.add("livro__titulo--lido")
+        check[i].classList.remove("livro__titulo--nao-lido")
+        })
+}
+
+const livroNaoLido = document.querySelectorAll(".botao-desfazer")
+
+for (let i = 0; i < livroNaoLido.length; i++){
+    livroNaoLido[i].addEventListener("click", function(){
+        const uncheck = document.querySelectorAll(".livro__titulo")
+        uncheck[i].classList.add("livro__titulo--nao-lido")
+        uncheck[i].classList.remove("livro__titulo--lido")
+    })
 }
