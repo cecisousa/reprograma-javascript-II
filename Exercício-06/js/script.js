@@ -23,6 +23,8 @@ formulario.addEventListener("submit", function(evento){
     let novaColuna3 = document.createElement("td")
     novaLinha.appendChild(novaColuna3)
     novaColuna3.textContent = text3
+
+    formulario.reset()
 })
 
 
