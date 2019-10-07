@@ -15,7 +15,7 @@ gato.dormir = function(){console.log("Zzz...")}
 
 let rolosPapelDestruidos = 0
 
-gato.aprontar = function(){bagunça += 1; console.log(rolosPapelDestruidos)}
+gato.aprontar = function(){rolosPapelDestruidos += 1; console.log(rolosPapelDestruidos)}
 
 gato.totalVidas = 7
 
